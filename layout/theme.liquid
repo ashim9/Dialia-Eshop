@@ -12,9 +12,9 @@
     <link rel="apple-touch-icon" href="{{ "favicon.png" | asset_url }}">
     <link rel="shortcut icon" href="{{ "favicon.ico" | asset_url }}">
     <!-- Google Font (font-family: 'Open Sans', sans-serif;) -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <!-- Google Font (font-family: 'Poppins', sans-serif;) -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
     <link rel="stylesheet" href="{{ "bootstrap.min.css" | asset_url }}" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="{{ "bootstrap.min.css" | asset_url }}" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="{{ "plugins.css" | asset_url }}" media="print" onload="this.media='all'">
@@ -39,14 +39,16 @@
       {% section 'announcement-bar' %}
       {% section 'header' %}
     </div>
-    <main role="main">{{ content_for_layout }}</main>
+    <main role="main">
+      {{ content_for_layout }}
+  
+    </main>
+
+
     <!-- JS -->
-    <script src="{{ "modernizr-3.6.0.min.js" | asset_url }}"></script>
-    <script src="{{ "jquery.min.js" | asset_url }}"></script>
-    <script src="{{ "popper.min.js" | asset_url }}"></script>
+    {% comment %} <script src="{{ "jquery.min.js" | asset_url }}"></script>
     <script src="{{ "bootstrap.min.js" | asset_url }}"></script>
-    <script src="{{ "plugins.js" | asset_url }}"></script>
-    <script src="{{ "main.js" | asset_url }}"></script>
+    <script src="{{ "main.js" | asset_url }}"></script> {% endcomment %}
     <!-- JS -->
   </body>
 </html>

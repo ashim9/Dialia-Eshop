@@ -1,29 +1,10 @@
 [
   {
-    "name": "Shipping Cost Global Variables",
-    "settings": [
-      {
-        "type": "header",
-        "content": "shipping cost starting price value and interval value."
-      },
-      {
-        "type": "text",
-        "id": "global_shipping_start_cost",
-        "label": "Global variable - Shipping Start Cost based on weight",
-        "default": "20"
-      },
-      {
-        "type": "text",
-        "id": "global_shipping_interval_cost",
-        "label": "Global variable - Shipping Start Cost based on weight",
-        "default": "10"
-      },
-      {
-        "type": "text",
-        "id": "global_turkey_currency_rate",
-        "label": "Global variable - Turkey currency conversion rate",
-        "default": "7.31"
-      }
-    ]
+    "name": "theme_info",
+    "theme_name": "dialia-treatment-center",
+    "theme_version": "1.0.0",
+    "theme_author": "Ashim",
+    "theme_documentation_url": "https:\/\/help.shopify.com\/manual\/online-store\/themes",
+    "theme_support_url": "https:\/\/support.shopify.com\/"
   }
 ]
