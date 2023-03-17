@@ -3,51 +3,34 @@
     {%- when 'announcement' -%}
       <div class="announcement-bar color-{{ block.settings.color_scheme }}" {{ block.shopify_attributes }}>
         {%- if block.settings.text != blank -%}
-<<<<<<< HEAD
-              <div class="page-width">
                 {% comment %} <p class="{{ block.settings.text_alignment }}">
                   {{ block.settings.text | escape }}
                 </p> {% endcomment %}
-
-          <div id="wrapper" class="wrapper">
-
-              <!-- Header Area -->
-              <div class="header">
-
-                  <!-- Header Top Area -->
-                  <div class="header-toparea">
-                      <div class="container">
-                          <div class="row align-items-center">
-                              <div class="col-md-7 col-sm-6 col-12">
-                                  <div class="header-topinfo">
-                                      <ul>
-                                          <li>Email us : <a href="mailto://contact@example.com">contact@example.com</a></li>
-                                          <li>Call us : <a href="tel://+1-800-915-6270">1-800-915-6270</a></li>
-                                      </ul>
+                <div id="wrapper" class="wrapper">
+                    <!-- Header Area -->
+                    <div class="header">
+                        <div class="header-toparea">
+                          <div class="container">
+                              <div class="row align-items-center">
+                                  <div class="col-md-7 col-sm-6 col-12">
+                                      <div class="header-topinfo">
+                                          <ul>
+                                              <li>{{ block.settings.text | escape }}<a href="mailto://contact@example.com">{{ block.settings.text | escape }}</a></li>
+                                              <li>{{ block.settings.text | escape }} <a href="tel://+1-800-915-6270">{{ block.settings.number }}</a></li>
+                                          </ul>
+                                      </div>
                                   </div>
-                              </div>
-                              <div class="col-md-5 col-sm-6 col-12">
-                                  <div class="header-topbutton">
-                                      <a href="#" class="tm-button tm-button-white">Book an Appointment</a>
+                                  <div class="col-md-5 col-sm-6 col-12">
+                                      <div class="header-topbutton">
+                                          <a href="#" class="tm-button tm-button-white">{{ block.settings.text | escape }}</a>
+                                      </div>
                                   </div>
                               </div>
                           </div>
-                      </div>
-                  </div>
-                  <!--// Header Top Area -->
-=======
-          {%- if block.settings.link != blank -%}
-            <a href="{{ block.settings.link }}" class="">
-          {%- endif -%}
-              <div class="page-width">
-                <p class="announcement-bar__message {{ block.settings.text_alignment }}">
-                  {{ block.settings.text | escape }}
-                </p>
->>>>>>> 0135b169f5419129651e72f8ec42eb2738c454d5
-              </div>
-          {%- if block.settings.link != blank -%}
-            </a>
-          {%- endif -%}
+                    </div>
+                    </div>
+                </div>
+                      <!--// Header Top Area -->
         {%- endif -%}
       </div>
   {%- endcase -%}
@@ -60,13 +43,19 @@
   "blocks": [
     {
       "type": "announcement",
-      "name": "t:sections.announcement-bar.blocks.announcement.name",
+      "name": "Announcement",
       "settings": [
         {
           "type": "text",
           "id": "text",
-          "default": "Welcome to our store",
-          "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+          "default": "Welcome",
+          "label": "text"
+        },
+        {
+          "type": "number",
+          "id": "number",
+          "default": "01",
+          "label": "number"
         },
         {
           "type": "select",
