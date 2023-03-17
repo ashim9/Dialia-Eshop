@@ -1,0 +1,32 @@
+[
+    3: 35 PM
+] Abir Islam
+[
+    {
+"name": "Shipping Cost Global Variables",
+ "settings": [
+ {
+ "type": "header",
+ "content": "shipping cost starting price value and interval value."
+ },
+ {
+ "type": "text",
+ "id": "global_shipping_start_cost",
+ "label": "Global variable - Shipping Start Cost based on weight",
+ "default": "20"
+ },
+ {
+ "type": "text",
+ "id": "global_shipping_interval_cost",
+ "label": "Global variable - Shipping Start Cost based on weight",
+ "default": "10"
+ },
+  {
+ "type": "text",
+ "id": "global_turkey_currency_rate",
+ "label": "Global variable - Turkey currency conversion rate",
+ "default": "7.31"
+   }
+ ]
+}
+]
