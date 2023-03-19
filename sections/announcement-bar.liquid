@@ -1,7 +1,7 @@
 {%- for block in section.blocks -%}
   {%- case block.type -%}
     {%- when 'announcement' -%}
-      <div class="announcement-bar color-{{ block.settings.color_scheme }}" {{ block.shopify_attributes }}>
+      <div class="announcement-bar color-{{ block.settings.color_scheme }}">
         {%- if block.settings.text != blank -%}
               <div class="page-width">
                 {% comment %} <p class="{{ block.settings.text_alignment }}">
@@ -20,7 +20,7 @@
                               <div class="col-md-7 col-sm-6 col-12">
                                   <div class="header-topinfo">
                                       <ul>
-                                          <li>Email us : <a href="mailto://contact@example.com">contact@example.com</a></li>
+                                          <li>{{ block.settings.text}} <a href="mailto://contact@example.com">{{ block.settings.text }}</a></li>
                                           <li>Call us : <a href="tel://+1-800-915-6270">1-800-915-6270</a></li>
                                       </ul>
                                   </div>
@@ -33,18 +33,6 @@
                           </div>
                       </div>
                   </div>
-                  <!--// Header Top Area -->
-          {%- if block.settings.link != blank -%}
-            <a href="{{ block.settings.link }}" class="">
-          {%- endif -%}
-              <div class="page-width">
-                <p class="announcement-bar__message {{ block.settings.text_alignment }}">
-                  {{ block.settings.text | escape }}
-                </p>
-              </div>
-          {%- if block.settings.link != blank -%}
-            </a>
-          {%- endif -%}
         {%- endif -%}
       </div>
   {%- endcase -%}
@@ -52,18 +40,18 @@
 
 {% schema %}
 {
-  "name": "t:sections.announcement-bar.name",
+  "name": "Announcement-bar",
   "max_blocks": 12,
   "blocks": [
     {
       "type": "announcement",
-      "name": "t:sections.announcement-bar.blocks.announcement.name",
+      "name": "announcement",
       "settings": [
         {
           "type": "text",
           "id": "text",
           "default": "Welcome to our store",
-          "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+          "label": "Text"
         },
         {
           "type": "select",
@@ -71,19 +59,19 @@
           "options": [
             {
               "value": "left",
-              "label": "t:sections.announcement-bar.blocks.announcement.settings.text_alignment.options__1.label"
+              "label": "left"
             },
             {
               "value": "center",
-              "label": "t:sections.announcement-bar.blocks.announcement.settings.text_alignment.options__2.label"
+              "label": "center"
             },
             {
               "value": "right",
-              "label": "t:sections.announcement-bar.blocks.announcement.settings.text_alignment.options__3.label"
+              "label": "right"
             }
           ],
           "default": "center",
-          "label": "t:sections.announcement-bar.blocks.announcement.settings.text_alignment.label"
+          "label": "center"
         },
         {
           "type": "select",
