@@ -78,9 +78,28 @@
   <!--// Header Bottom Area -->
 </div>
 {% schema %}
-  {
-    "name": "Header-Navbar",
-    "settings": [
+    {
+    "name" : "Header",
+    "blocks": [
+        {
+            "name" : "header",
+            "type" : "header",
+            "settings" :[
+                {
+                    "type": "image_picker",
+                    "id": "left_logo",
+                    "label": "Single-Image"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "right_logo",
+                    "label": "Single-Image"
+                }
+            ]
+        }
+    ],
+    "default": {
+    "blocks": [
       {
         "type": "image_picker",
         "id": "site-logo",
