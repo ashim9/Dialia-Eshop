@@ -1,97 +1,140 @@
-<div class="header">
-  <!-- Header Bottom Area -->
-  <div class="header-bottomarea">
-    <div class="container">
-      <div class="header-bottominner">
-        <div class="header-logo">
-          <a href="index.html">
-            <img
-              src="{{ section.settings.site-logo | img_url: '105px' }}"
-              loading="lazy"
-              width="105"
-              height="65"
-              alt="The Soap Store"
-              id="logo">
-          </a>
+{%- for block in section.blocks -%}
+  {%- case block.type -%}
+    {%- when 'header' -%}
+        <!-- Header Bottom Area -->
+        <div class="header-bottomarea">
+            <div class="container">
+                <div class="header-bottominner">
+                    <div class="header-logo">
+                        <a href="index.html">
+                                <img src="{{ block.settings.left_logo| img_url: "master" }}" class="image-{{ block.id }}">
+                            {% comment %} <img src="assets/images/logo/logo.png" alt="dialia logo"> {% endcomment %}
+                        </a>
+                    </div>
+                    {% comment %} <nav class="tm-navigation">
+                    <ul class="menu">
+                        {% for link in block.settings.menu.links %}
+                            <li class="tm-navigation-dropdown">
+                            <a href="{{ link.url }}">{{ link.title }}</a>
+                                {% if link.links.size > 0 %}
+                                    <ul class="menu dropdown-child">
+                                    {% for child_link in link.links %}
+                                        <li class="menu-link">
+                                        <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+
+                                        {% if child_link.links.size > 0 %}
+                                            <ul class="tm-navigation-megamenu">
+                                            {% for grandchild_link in child_link.links %}
+                                                <li class="menu-link">
+                                                <a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                                                </li>
+                                            {% endfor %}
+                                            </ul>
+                                        {% endif %}
+                                        </li>
+                                    {% endfor %}
+                                    </ul>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    </nav> {% endcomment %}
+                    <nav class="tm-navigation">
+                        <ul>
+                            {%- for link in section.settings.menu.links -%} 
+                                {%- if link.links != blank -%} 
+                                    <li class="tm-navigation-dropdown">
+                                        <a href="{{ link.url }}">{{ link.title }} 
+                                            <i class="fa-solid fa-angle-down">
+                                            </i>
+                                        </a> 
+                                    <ul> 
+                                        {%- for childlink in link.links -%}
+                                            {%- if childlink.links == blank -%}
+                                                <li>
+                                                     <a href="{{ childlink.url }}">{{ childlink.title }}</a>
+                                                    </li>
+                                                 {% else %}
+                                                <li> 
+                                                    <a href="{{ childlink.url }}">{{ childlink.title }}
+                                                        <i class="fa-solid fa-angle-right"></i>
+                                                    </a>
+                                                <ul>
+                                                    {%- for grandchildlink in childlink.links -%}
+                                                     <li>
+                                                        <a href="{{ grandchildlink.url }}">{{ grandchildlink.title }}</a>
+                                                    </li>
+                                                {%- endfor -%} 
+                                            </ul>
+                                            </li>
+                                    {% endif %}
+                                {%- endfor -%}
+                                </ul>
+                            </li> 
+                            {% else %}
+                            <li>
+                                <a href="{{ link.url }}">{{ link.title }}</a>
+                            </li>
+                            {% endif %} 
+                            {% endfor %} 
+                            </ul> 
+                            </nav>
+                    <div class="header-icons">
+                        <ul>
+                            <li><a href="cart.html"><i class="zmdi zmdi-shopping-cart"></i></a></li>
+                            <li><a href="#" class="header-searchtrigger"><i class="zmdi zmdi-search"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="header-searchbox">
+                        <div class="header-searchinner">
+                            <form action="#" class="header-searchform">
+                                <input type="text" placeholder="Enter search keyword..">
+                            </form>
+                            <button class="search-close"><i class="zmdi zmdi-close"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-mobilemenu clearfix">
+                    <div class="tm-mobilenav"></div>
+                </div>
+            </div>
         </div>
-        <nav class="tm-navigation">
-          <ul>
-            {%- for link in section.settings.menu.links -%}
-              {%- if link.links != blank -%}
-                <li class="tm-navigation-dropdown">
-                  <a href="{{ link.url }}">{{ link.title }}
-                    <i class="fa-solid fa-angle-down"></i>
-                  </a>
-                  <ul>
-                    {%- for childlink in link.links -%}
-                      {%- if childlink.links == blank -%}
-                        <li>
-                          <a href="{{ childlink.url }}">{{ childlink.title }}</a>
-                        </li>
-                      {% else %}
-                        <li>
-                          <a href="{{ childlink.url }}">{{ childlink.title }}
-                            <i class="fa-solid fa-angle-right"></i>
-                          </a>
-                          <ul>
-                            {%- for grandchildlink in childlink.links -%}
-                              <li>
-                                <a href="{{ grandchildlink.url }}">{{ grandchildlink.title }}</a>
-                              </li>
-                            {%- endfor -%}
-                          </ul>
-                        </li>
-                      {% endif %}
-                    {%- endfor -%}
-                  </ul>
-                </li>
-              {% else %}
-                <li>
-                  <a href="{{ link.url }}">{{ link.title }}</a>
-                </li>
-              {% endif %}
-            {% endfor %}
-          </ul>
-        </nav>
-        <div class="header-icons">
-          <ul>
-            <li><a href="cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a></li>
-            <li><a href="#" class="header-searchtrigger"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-          </ul>
-        </div>
-        <div class="header-searchbox">
-          <div class="header-searchinner">
-            <form action="#" class="header-searchform">
-              <input type="text" placeholder="Enter search keyword..">
-            </form>
-            <button class="search-close">
-              <i class="zmdi zmdi-close"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="header-mobilemenu clearfix">
-        <div class="tm-mobilenav"></div>
-      </div>
-    </div>
-  </div>
-  <!--// Header Bottom Area -->
-</div>
+        <!--// Header Bottom Area -->
+  {%- endcase -%}
+{%- endfor -%}
+
 {% schema %}
-  {
-    "name": "Header-Navbar",
-    "settings": [
+    {
+    "name" : "Header",
+    "blocks": [
+        {
+            "name" : "header",
+            "type" : "header",
+            "settings" :[
+                {
+                    "type": "image_picker",
+                    "id": "left_logo",
+                    "label": "Single-Image"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "right_logo",
+                    "label": "Single-Image"
+                }
+            ]
+        }
+    ],
+    // "presets": [
+    //   {
+    //     "name": "header"
+    //   }
+    // ]
+    "default": {
+    "blocks": [
       {
-        "type": "image_picker",
-        "id": "site-logo",
-        "label": "Site Logo"
-      }, 
-      {
-        "type": "link_list",
-        "id": "menu",
-        "default": "main-menu",
-        "label": "Choose Menu"
+        "type": "header"
       }
     ]
   }
+}
 {% endschema %}
