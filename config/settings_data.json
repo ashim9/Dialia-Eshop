@@ -1,4 +1,35 @@
 {
   "current": {
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "announcement-bar-0": {
+            "type": "announcement",
+            "settings": {
+              "text": "Email Us :",
+              "text1": "contact@example.com",
+              "number": 0,
+              "text_alignment": "center",
+              "color_scheme": "accent-1",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "announcement-bar-0"
+        ],
+        "settings": {
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
   }
 }
