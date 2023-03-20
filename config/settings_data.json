@@ -7,9 +7,8 @@
           "announcement-bar-0": {
             "type": "announcement",
             "settings": {
-              "text": "Email Us :",
-              "text1": "contact@example.com",
-              "number": 0,
+              "text": "contact@example.com",
+              "text2": "1-800-915-6270",
               "text_alignment": "center",
               "color_scheme": "accent-1",
               "link": ""
