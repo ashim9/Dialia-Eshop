@@ -1,38 +1,40 @@
-
+{%- for block in section.blocks -%}
+  {%- case block.type -%}
+    {%- when 'announcement' -%}
  <!-- Header Bottom Area -->
 <div class="header-bottomarea">
     <div class="container">
         <div class="header-bottominner">
             <div class="header-logo">
                 <a href="index.html">
-                    <img src="assets/images/logo/logo.png" alt="dialia logo">
+                        <img src="{{ block.settings.left_logo| img_url: "master" }}" class="image-{{ block.id }}">
+                    {% comment %} <img src="assets/images/logo/logo.png" alt="dialia logo"> {% endcomment %}
                 </a>
             </div>
             <nav class="tm-navigation">
               <ul class="menu">
                 {% for link in block.settings.menu.links %}
-                    <li class="menu-link tm-navigation-dropdown">
+                    <li class="tm-navigation-dropdown">
                     <a href="{{ link.url }}">{{ link.title }}</a>
+                        {% if link.links.size > 0 %}
+                            <ul class="menu dropdown-child">
+                            {% for child_link in link.links %}
+                                <li class="menu-link">
+                                <a href="{{ child_link.url }}">{{ child_link.title }}</a>
 
-                    {% if link.links.size > 0 %}
-                        <ul class="menu dropdown-child">
-                        {% for child_link in link.links %}
-                            <li class="menu-link">
-                            <a href="{{ child_link.url }}">{{ child_link.title }}</a>
-
-                            {% if child_link.links.size > 0 %}
-                                <ul class="menu dropdown-grandchild tm-navigation-megamenu">
-                                {% for grandchild_link in child_link.links %}
-                                    <li class="menu-link">
-                                    <a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
-                                    </li>
-                                {% endfor %}
-                                </ul>
-                            {% endif %}
-                            </li>
-                        {% endfor %}
-                        </ul>
-                    {% endif %}
+                                {% if child_link.links.size > 0 %}
+                                    <ul class="tm-navigation-megamenu">
+                                    {% for grandchild_link in child_link.links %}
+                                        <li class="menu-link">
+                                        <a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                                        </li>
+                                    {% endfor %}
+                                    </ul>
+                                {% endif %}
+                                </li>
+                            {% endfor %}
+                            </ul>
+                        {% endif %}
                     </li>
                 {% endfor %}
                 </ul>
@@ -58,37 +60,36 @@
     </div>
 </div>
 <!--// Header Bottom Area -->
+  {%- endcase -%}
+{%- endfor -%}
+
 {% schema %}
-{
-  "name": "Header",
-  "max_blocks": 12,
-  "blocks": [
     {
-      "type": "header",
-      "name": "header",
-      "settings": [
+    "name" : "Header",
+    "blocks": [
         {
-          "type": "text",
-          "id": "text",
-          "default": "a@b.com",
-          "label": "Email"
-        },
-       {
-         "type": "text",
-         "id": "phone-text",
-         "default": "1-800-915-6270",
-         "label": "Phone Number"
-       },
-       {
-         "type": "text",
-         "id": "btn-text",
-         "default": "Book an Appointment",
-         "label": "Button Text"
-       }
-      ]
-    }
-  ],
-  "default": {
+            "name" : "header",
+            "type" : "header",
+            "settings" :[
+                {
+                    "type": "image_picker",
+                    "id": "left_logo",
+                    "label": "Single-Image"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "right_logo",
+                    "label": "Single-Image"
+                }
+            ]
+        }
+    ],
+    // "presets": [
+    //   {
+    //     "name": "header"
+    //   }
+    // ]
+    "default": {
     "blocks": [
       {
         "type": "header"
