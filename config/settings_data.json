@@ -27,10 +27,17 @@
             "settings": {
               "left_logo": "shopify:\/\/shop_images\/logo.png"
             }
+          },
+          "b9fa73cd-c1ca-4245-a554-b05eb1dc80b3": {
+            "type": "header",
+            "settings": {
+              "left_logo": "shopify:\/\/shop_images\/logo.png"
+            }
           }
         },
         "block_order": [
-          "35972334-70e1-4d8d-b8a3-3db899f70742"
+          "35972334-70e1-4d8d-b8a3-3db899f70742",
+          "b9fa73cd-c1ca-4245-a554-b05eb1dc80b3"
         ],
         "settings": {
         }
