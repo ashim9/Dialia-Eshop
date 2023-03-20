@@ -5,7 +5,17 @@
         <div class="header-logo">
           <a href="index.html">
             <img
+<<<<<<< HEAD
               src="{{ section.settings.site-logo | img_url: '105px' }}" loading="lazy" width="105" height="65" alt="logo" id="logo">
+=======
+              src="{{ section.settings.site-logo | img_url: '105px' }}"
+              loading="lazy"
+              width="105"
+              height="65"
+              alt="logo"
+              id="logo"
+            >
+>>>>>>> b39c9a6b014d5298d9b9a2702bc0b8392dec5952
           </a>
         </div>
         <nav class="tm-navigation">
@@ -26,7 +36,7 @@
                       {% else %}
                         <li>
                           <a href="{{ childlink.url }}">
-                            {{- childlink.title }}
+                            {{ childlink.title }}
                             <i class="fa-solid fa-angle-right"></i>
                           </a>
                           <ul>
@@ -78,6 +88,7 @@
 </div>
 
 {% schema %}
+<<<<<<< HEAD
   {
     "name": "Navbar",
     "settings": [
@@ -95,4 +106,22 @@
     ]
   }
 
+=======
+{
+  "name": "Navbar",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "site-logo",
+      "label": "Site Logo"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "default": "main-menu",
+      "label": "Choose Menu"
+    }
+  ]
+}
+>>>>>>> b39c9a6b014d5298d9b9a2702bc0b8392dec5952
 {% endschema %}

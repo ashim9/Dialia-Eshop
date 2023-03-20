@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="{{ "plugins.css" | asset_url }}" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="{{ "style.css" | asset_url }}" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="{{ "custom.css" | asset_url }}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   </head>
   <body>
     <div class="tm-preloader" style="transform: translateX(-100%);">
@@ -35,15 +36,17 @@
       </svg>
       <button class="tm-button tm-button-white">Cancel Preloader</button>
     </div>
+    {% section 'announcement-bar' %}
     <div class="header">
-      {% section 'announcement-bar' %}
       {% section 'header' %}
     </div>
     <main role="main">
       {{ content_for_layout }}
-  
     </main>
 
+    <div class="footer">
+      {% section 'footer' %}
+    </div>
 
     <!-- JS -->
     <script src="{{ "jquery.min.js" | asset_url }}"></script>

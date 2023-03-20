@@ -21,18 +21,9 @@
       },
       "header": {
         "type": "header",
-        "blocks": {
-          "35972334-70e1-4d8d-b8a3-3db899f70742": {
-            "type": "header",
-            "settings": {
-              "left_logo": "shopify:\/\/shop_images\/logo.png"
-            }
-          }
-        },
-        "block_order": [
-          "35972334-70e1-4d8d-b8a3-3db899f70742"
-        ],
         "settings": {
+          "site-logo": "shopify:\/\/shop_images\/logo.png",
+          "menu": "main-menu"
         }
       }
     },
