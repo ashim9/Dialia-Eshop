@@ -1,27 +1,99 @@
- <ul class="menu">
-  {% for link in section.settings.menu.links %}
-    <li class="menu-link">
-      <a href="{{ link.url }}">{{ link.title }}</a>
 
-      {% if link.links.size > 0 %}
-        <ul class="menu dropdown-child">
-          {% for child_link in link.links %}
-            <li class="menu-link">
-              <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+ <!-- Header Bottom Area -->
+<div class="header-bottomarea">
+    <div class="container">
+        <div class="header-bottominner">
+            <div class="header-logo">
+                <a href="index.html">
+                    <img src="assets/images/logo/logo.png" alt="dialia logo">
+                </a>
+            </div>
+            <nav class="tm-navigation">
+              <ul class="menu">
+                {% for link in block.settings.menu.links %}
+                    <li class="menu-link tm-navigation-dropdown">
+                    <a href="{{ link.url }}">{{ link.title }}</a>
 
-              {% if child_link.links.size > 0 %}
-                <ul class="menu dropdown-grandchild">
-                  {% for grandchild_link in child_link.links %}
-                    <li class="menu-link">
-                      <a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                    {% if link.links.size > 0 %}
+                        <ul class="menu dropdown-child">
+                        {% for child_link in link.links %}
+                            <li class="menu-link">
+                            <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+
+                            {% if child_link.links.size > 0 %}
+                                <ul class="menu dropdown-grandchild tm-navigation-megamenu">
+                                {% for grandchild_link in child_link.links %}
+                                    <li class="menu-link">
+                                    <a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                                    </li>
+                                {% endfor %}
+                                </ul>
+                            {% endif %}
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    {% endif %}
                     </li>
-                  {% endfor %}
+                {% endfor %}
                 </ul>
-              {% endif %}
-            </li>
-          {% endfor %}
-        </ul>
-      {% endif %}
-    </li>
-  {% endfor %}
-</ul>
+            </nav>
+            <div class="header-icons">
+                <ul>
+                    <li><a href="cart.html"><i class="zmdi zmdi-shopping-cart"></i></a></li>
+                    <li><a href="#" class="header-searchtrigger"><i class="zmdi zmdi-search"></i></a></li>
+                </ul>
+            </div>
+            <div class="header-searchbox">
+                <div class="header-searchinner">
+                    <form action="#" class="header-searchform">
+                        <input type="text" placeholder="Enter search keyword..">
+                    </form>
+                    <button class="search-close"><i class="zmdi zmdi-close"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="header-mobilemenu clearfix">
+            <div class="tm-mobilenav"></div>
+        </div>
+    </div>
+</div>
+<!--// Header Bottom Area -->
+{% schema %}
+{
+  "name": "Header",
+  "max_blocks": 12,
+  "blocks": [
+    {
+      "type": "header",
+      "name": "header",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "default": "a@b.com",
+          "label": "Email"
+        },
+       {
+         "type": "text",
+         "id": "phone-text",
+         "default": "1-800-915-6270",
+         "label": "Phone Number"
+       },
+       {
+         "type": "text",
+         "id": "btn-text",
+         "default": "Book an Appointment",
+         "label": "Button Text"
+       }
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      {
+        "type": "header"
+      }
+    ]
+  }
+}
+{% endschema %}
