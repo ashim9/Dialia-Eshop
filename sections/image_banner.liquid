@@ -1,12 +1,16 @@
+<div>
+  <img src="{{ section.settings.image }}">
+</div>
+
 {% schema %}
 {
   "name": "image_banner",
-  "settings": []
+  "settings": [
+{
+  "type": "image_picker",
+  "id": "image",
+  "label": "Image"
+}
+]
 }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
