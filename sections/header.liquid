@@ -10,8 +10,9 @@
               loading="lazy"
               width="105"
               height="65"
-              alt="logo"
-              id="logo">
+              alt="The Soap Store"
+              id="logo"
+            >
           </a>
         </div>
         <nav class="tm-navigation">
@@ -19,7 +20,8 @@
             {%- for link in section.settings.menu.links -%}
               {%- if link.links != blank -%}
                 <li class="tm-navigation-dropdown">
-                  <a href="{{ link.url }}">{{ link.title }}
+                  <a href="{{ link.url }}">
+                    {{- link.title }}
                     <i class="fa-solid fa-angle-down"></i>
                   </a>
                   <ul>
@@ -30,7 +32,8 @@
                         </li>
                       {% else %}
                         <li>
-                          <a href="{{ childlink.url }}">{{ childlink.title }}
+                          <a href="{{ childlink.url }}">
+                            {{- childlink.title }}
                             <i class="fa-solid fa-angle-right"></i>
                           </a>
                           <ul>
@@ -55,8 +58,12 @@
         </nav>
         <div class="header-icons">
           <ul>
-            <li><a href="cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a></li>
-            <li><a href="#" class="header-searchtrigger"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+            <li>
+              <a href="cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+            </li>
+            <li>
+              <a href="#" class="header-searchtrigger"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </li>
           </ul>
         </div>
         <div class="header-searchbox">
@@ -75,22 +82,41 @@
       </div>
     </div>
   </div>
-  <!--// Header Bottom Area -->
+  <!-- // Header Bottom Area -->
 </div>
 {% schema %}
-  {
-    "name": "Header-Navbar",
-    "settings": [
+    {
+    "name" : "Header",
+    "blocks": [
+        {
+            "name" : "header",
+            "type" : "header",
+            "settings" :[
+                {
+                    "type": "image_picker",
+                    "id": "left_logo",
+                    "label": "Single-Image"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "right_logo",
+                    "label": "Single-Image"
+                }
+            ]
+        }
+    ],
+    // "presets": [
+    //   {
+    //     "name": "header"
+    //   }
+    // ]
+    "default": {
+    "blocks": [
+
       {
-        "type": "image_picker",
-        "id": "site-logo",
-        "label": "Site Logo"
-      }, {
-        "type": "link_list",
-        "id": "menu",
-        "default": "main-menu",
-        "label": "Choose Menu"
+        "type": "header"
       }
     ]
   }
+}
 {% endschema %}
