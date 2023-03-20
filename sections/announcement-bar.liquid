@@ -15,7 +15,7 @@
                               <div class="col-md-7 col-sm-6 col-12">
                                   <div class="header-topinfo">
                                       <ul>
-                                          <li>{{ block.settings.text }} <a href="mailto://contact@example.com">{{ block.settings.text1 }}</a></li>
+                                          <li>Email us: <a href="mailto://contact@example.com">{{ block.settings.text }}</a></li>
                                           <li>Call us : <a href="tel://+1-800-915-6270">{{ block.settings.number }}</a></li>
                                       </ul>
                                   </div>
@@ -45,25 +45,13 @@
         {
           "type": "text",
           "id": "text",
-          "default": "Email us:",
-          "label": "Text"
+          "default": "a@b.com",
+          "label": "Email"
         },
-        {
-         "type": "text",
-         "id": "text1",
-         "default": "contact@example.com",
-         "label": "Text"
-       },
-        {
-         "type": "text",
-         "id": "text2",
-         "default": "Call us:",
-         "label": "Text"
-       },
        {
          "type": "number",
          "id": "number",
-         "default": 0,
+         "default": 1,
          "label": "Phone Number"
        },
         {
