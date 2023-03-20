@@ -39,10 +39,10 @@
     <div class="header">
       {% section 'announcement-bar' %}
       {% section 'header' %}
+      <main role="main">
+        {{ content_for_layout }}
+      </main>
     </div>
-    <main role="main">
-      {{ content_for_layout }}
-    </main>
 
     <!-- JS -->
     <script src="{{ "jquery.min.js" | asset_url }}"></script>
