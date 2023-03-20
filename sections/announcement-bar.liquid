@@ -16,13 +16,13 @@
                                   <div class="header-topinfo">
                                       <ul>
                                           <li>Email us : <a href="mailto://contact@example.com">{{ block.settings.text }}</a></li>
-                                          <li>Call us : <a href="tel://+1-800-915-6270">{{ block.settings.text2 }}</a></li>
+                                          <li>Call us : <a href="tel://+1-800-915-6270">{{ block.settings.phone-text }}</a></li>
                                       </ul>
                                   </div>
                               </div>
                               <div class="col-md-5 col-sm-6 col-12">
                                   <div class="header-topbutton">
-                                      <a href="#" class="tm-button tm-button-white">Book an Appointment</a>
+                                      <a href="#" class="tm-button tm-button-white">{{ block.settings.btn-text }}</a>
                                   </div>
                               </div>
                           </div>
@@ -50,25 +50,21 @@
         },
        {
          "type": "text",
-         "id": "text2",
+         "id": "phone-text",
          "default": "1-800-915-6270",
          "label": "Phone Number"
+       },
+       {
+         "type": "text",
+         "id": "btn-text",
+         "default": "Book an Appointment",
+         "label": "Button Text"
        },
         {
           "type": "color",
           "id": "text-color",
           "label": "Text Color",
           "default": "#333333"
-        },
-          {
-            "type": "range",
-            "id": "header-font-size",
-            "label": "Header Font Size",
-            "min": 10,
-            "max": 50,
-            "step": 1,
-            "unit": "px",
-            "default": 24
         }
       ]
     }
