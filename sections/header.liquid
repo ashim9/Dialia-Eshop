@@ -1,65 +1,65 @@
 {%- for block in section.blocks -%}
   {%- case block.type -%}
-    {%- when 'announcement' -%}
- <!-- Header Bottom Area -->
-<div class="header-bottomarea">
-    <div class="container">
-        <div class="header-bottominner">
-            <div class="header-logo">
-                <a href="index.html">
-                        <img src="{{ block.settings.left_logo| img_url: "master" }}" class="image-{{ block.id }}">
-                    {% comment %} <img src="assets/images/logo/logo.png" alt="dialia logo"> {% endcomment %}
-                </a>
-            </div>
-            <nav class="tm-navigation">
-              <ul class="menu">
-                {% for link in block.settings.menu.links %}
-                    <li class="tm-navigation-dropdown">
-                    <a href="{{ link.url }}">{{ link.title }}</a>
-                        {% if link.links.size > 0 %}
-                            <ul class="menu dropdown-child">
-                            {% for child_link in link.links %}
-                                <li class="menu-link">
-                                <a href="{{ child_link.url }}">{{ child_link.title }}</a>
-
-                                {% if child_link.links.size > 0 %}
-                                    <ul class="tm-navigation-megamenu">
-                                    {% for grandchild_link in child_link.links %}
+    {%- when 'header' -%}
+        <!-- Header Bottom Area -->
+        <div class="header-bottomarea">
+            <div class="container">
+                <div class="header-bottominner">
+                    <div class="header-logo">
+                        <a href="index.html">
+                                <img src="{{ block.settings.left_logo| img_url: "master" }}" class="image-{{ block.id }}">
+                            {% comment %} <img src="assets/images/logo/logo.png" alt="dialia logo"> {% endcomment %}
+                        </a>
+                    </div>
+                    <nav class="tm-navigation">
+                    <ul class="menu">
+                        {% for link in block.settings.menu.links %}
+                            <li class="tm-navigation-dropdown">
+                            <a href="{{ link.url }}">{{ link.title }}</a>
+                                {% if link.links.size > 0 %}
+                                    <ul class="menu dropdown-child">
+                                    {% for child_link in link.links %}
                                         <li class="menu-link">
-                                        <a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                                        <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+
+                                        {% if child_link.links.size > 0 %}
+                                            <ul class="tm-navigation-megamenu">
+                                            {% for grandchild_link in child_link.links %}
+                                                <li class="menu-link">
+                                                <a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                                                </li>
+                                            {% endfor %}
+                                            </ul>
+                                        {% endif %}
                                         </li>
                                     {% endfor %}
                                     </ul>
                                 {% endif %}
-                                </li>
-                            {% endfor %}
-                            </ul>
-                        {% endif %}
-                    </li>
-                {% endfor %}
-                </ul>
-            </nav>
-            <div class="header-icons">
-                <ul>
-                    <li><a href="cart.html"><i class="zmdi zmdi-shopping-cart"></i></a></li>
-                    <li><a href="#" class="header-searchtrigger"><i class="zmdi zmdi-search"></i></a></li>
-                </ul>
-            </div>
-            <div class="header-searchbox">
-                <div class="header-searchinner">
-                    <form action="#" class="header-searchform">
-                        <input type="text" placeholder="Enter search keyword..">
-                    </form>
-                    <button class="search-close"><i class="zmdi zmdi-close"></i></button>
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    </nav>
+                    <div class="header-icons">
+                        <ul>
+                            <li><a href="cart.html"><i class="zmdi zmdi-shopping-cart"></i></a></li>
+                            <li><a href="#" class="header-searchtrigger"><i class="zmdi zmdi-search"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="header-searchbox">
+                        <div class="header-searchinner">
+                            <form action="#" class="header-searchform">
+                                <input type="text" placeholder="Enter search keyword..">
+                            </form>
+                            <button class="search-close"><i class="zmdi zmdi-close"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-mobilemenu clearfix">
+                    <div class="tm-mobilenav"></div>
                 </div>
             </div>
         </div>
-        <div class="header-mobilemenu clearfix">
-            <div class="tm-mobilenav"></div>
-        </div>
-    </div>
-</div>
-<!--// Header Bottom Area -->
+        <!--// Header Bottom Area -->
   {%- endcase -%}
 {%- endfor -%}
 
