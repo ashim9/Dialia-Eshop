@@ -11,7 +11,7 @@
                             {% comment %} <img src="assets/images/logo/logo.png" alt="dialia logo"> {% endcomment %}
                         </a>
                     </div>
-                    <nav class="tm-navigation">
+                    {% comment %} <nav class="tm-navigation">
                     <ul class="menu">
                         {% for link in block.settings.menu.links %}
                             <li class="tm-navigation-dropdown">
@@ -38,7 +38,47 @@
                             </li>
                         {% endfor %}
                         </ul>
-                    </nav>
+                    </nav> {% endcomment %}
+                    <nav class="tm-navigation">
+                        <ul>
+                            {%- for link in section.settings.menu.links -%} 
+                                {%- if link.links != blank -%} 
+                                    <li class="tm-navigation-dropdown">
+                                        <a href="{{ link.url }}">{{ link.title }} 
+                                            <i class="fa-solid fa-angle-down">
+                                            </i>
+                                        </a> 
+                                    <ul> 
+                                        {%- for childlink in link.links -%}
+                                            {%- if childlink.links == blank -%}
+                                                <li>
+                                                     <a href="{{ childlink.url }}">{{ childlink.title }}</a>
+                                                    </li>
+                                                 {% else %}
+                                                <li> 
+                                                    <a href="{{ childlink.url }}">{{ childlink.title }}
+                                                        <i class="fa-solid fa-angle-right"></i>
+                                                    </a>
+                                                <ul>
+                                                    {%- for grandchildlink in childlink.links -%}
+                                                     <li>
+                                                        <a href="{{ grandchildlink.url }}">{{ grandchildlink.title }}</a>
+                                                    </li>
+                                                {%- endfor -%} 
+                                            </ul>
+                                            </li>
+                                    {% endif %}
+                                {%- endfor -%}
+                                </ul>
+                            </li> 
+                            {% else %}
+                            <li>
+                                <a href="{{ link.url }}">{{ link.title }}</a>
+                            </li>
+                            {% endif %} 
+                            {% endfor %} 
+                            </ul> 
+                            </nav>
                     <div class="header-icons">
                         <ul>
                             <li><a href="cart.html"><i class="zmdi zmdi-shopping-cart"></i></a></li>
