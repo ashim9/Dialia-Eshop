@@ -1,5 +1,4 @@
 <div class="header">
-  <!-- Header Bottom Area -->
   <div class="header-bottomarea">
     <div class="container">
       <div class="header-bottominner">
@@ -10,7 +9,7 @@
               loading="lazy"
               width="105"
               height="65"
-              alt="The Soap Store"
+              alt="logo"
               id="logo"
             >
           </a>
@@ -82,41 +81,23 @@
       </div>
     </div>
   </div>
-  <!-- // Header Bottom Area -->
 </div>
-{% schema %}
-    {
-    "name" : "Header",
-    "blocks": [
-        {
-            "name" : "header",
-            "type" : "header",
-            "settings" :[
-                {
-                    "type": "image_picker",
-                    "id": "left_logo",
-                    "label": "Single-Image"
-                },
-                {
-                    "type": "image_picker",
-                    "id": "right_logo",
-                    "label": "Single-Image"
-                }
-            ]
-        }
-    ],
-    // "presets": [
-    //   {
-    //     "name": "header"
-    //   }
-    // ]
-    "default": {
-    "blocks": [
 
-      {
-        "type": "header"
-      }
-    ]
-  }
+{% schema %}
+{
+  "name": "Navbar",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "site-logo",
+      "label": "Site Logo"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "default": "main-menu",
+      "label": "Choose Menu"
+    }
+  ]
 }
 {% endschema %}
