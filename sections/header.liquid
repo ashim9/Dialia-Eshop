@@ -1,6 +1,4 @@
-
-{% for link in section.settings.menu.links %}
-  <ul class="menu">
+ <ul class="menu">
   {% for link in section.settings.menu.links %}
     <li class="menu-link">
       <a href="{{ link.url }}">{{ link.title }}</a>
@@ -27,4 +25,3 @@
     </li>
   {% endfor %}
 </ul>
-{% endfor %}
