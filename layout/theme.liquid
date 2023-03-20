@@ -44,7 +44,9 @@
       {{ content_for_layout }}
     </main>
 
-    <footer>Footer</footer>
+    <div class="footer">
+      {% section 'footer' %}
+    </div>
 
     <!-- JS -->
     <script src="{{ "jquery.min.js" | asset_url }}"></script>
