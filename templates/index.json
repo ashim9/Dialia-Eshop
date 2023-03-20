@@ -3,6 +3,7 @@
     "image_banner": {
       "type": "image_banner",
       "settings": {
+        "image": "shopify:\/\/shop_images\/fashionable-man-in-hat.jpg"
       }
     }
   },
