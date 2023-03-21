@@ -1,15 +1,14 @@
-
-      <div
-        class="heroslider-area"
-        data-bgimage="{{ "bg-image-1.jpg" | asset_url }}"
-        style="background-image: url('{{ "bg-image-1.jpg" | asset_url }}');"
-        data-black-overlay="3"
-      >
-        {% for block in section.blocks %}
-  {% case block.type %}
-    {% when 'hero-banner' %}
-        <!-- Heroslider Slider -->
-        <div class="heroslider-slider heroslider-animated tm-slider-dots tm-slider-dots-left" data-white-overlay="7">
+<div
+  class="heroslider-area"
+  data-bgimage="{{ "bg-image-1.jpg" | asset_url }}"
+  style="background-image: url('{{ "bg-image-1.jpg" | asset_url }}');"
+  data-black-overlay="3"
+>
+  <!-- Heroslider Slider -->
+  <div class="heroslider-slider heroslider-animated tm-slider-dots tm-slider-dots-left" data-white-overlay="7">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'hero-banner' %}
           <!-- Heroslider Single -->
           <div class="heroslider-singleslider d-flex align-items-center">
             <div class="container">
@@ -38,13 +37,12 @@
             </div>
           </div>
           <!-- // Heroslider Single -->
-
-  {% endcase %}
-{% endfor %}
-        </div>
-        <!-- // Heroslider Slider -->
-      </div>
-      <!-- // Heroslider Area -->
+      {% endcase %}
+    {% endfor %}
+  </div>
+  <!-- // Heroslider Slider -->
+</div>
+<!-- // Heroslider Area -->
 
 {% schema %}
 {
