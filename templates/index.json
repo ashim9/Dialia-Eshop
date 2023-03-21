@@ -7,9 +7,9 @@
           "type": "hero-banner",
           "settings": {
             "image": "shopify:\/\/shop_images\/heroslider-image-1.jpg",
-            "heading-text": "heading text",
+            "heading-text": "Pain makes People change",
             "heading-description": "Massage has a positive effect on every medical condition we have looked at massage is to work and act on the body with pressure.",
-            "button_text": "Button",
+            "button_text": "About Us",
             "button_link": ""
           }
         }
@@ -18,10 +18,6 @@
         "a3c093f8-d06c-43c0-b00d-915bd6a00f7b"
       ],
       "settings": {
-<<<<<<< HEAD
-        "image": ""
-=======
->>>>>>> 6203c733ce0e73a1a5105874853ac357bff51bf0
       }
     }
   },
