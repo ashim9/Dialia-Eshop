@@ -3,7 +3,7 @@
     {% when 'hero-banner' %}
       <div
         class="heroslider-area"
-        data-bgimage="{{ 'bg-image-1.jpg' | asset_url | stylesheet_tag }}"
+        data-bgimage="{{ 'bg-image-1.jpg' | asset_url | image_url: "master" | stylesheet_tag }}"
         data-black-overlay="3"
       >
         <!-- Heroslider Slider -->
@@ -14,7 +14,6 @@
               <div class="row align-items-center">
                 <div class="col-lg-7 col-md-6 col-12 order-2 order-md-1">
                   <div class="heroslider-content">
-                    {% comment %} <h1>Pain makes People change</h1> {% endcomment %}
                     <h1>{{ block.settings.heading }}</h1>
                     <p>{{ block.settings['heading-description'] }}</p>
                     <a href="about-us.html" class="tm-button">{{ block.settings.button_text }} </a>
@@ -47,7 +46,7 @@
                     <svg viewBox="0 0 665 645">
                       <defs>
                           <pattern id="attachedImage2" height="100%" width="100%" patternContentUnits="objectBoundingBox">
-                              <image xlink:href="{{ block.settings.image }}"
+                              <image xlink:href="{{ block.settings.image | image_url: "master" }}"
                                   preserveAspectRatio="none" width="1" height="1" />
                           </pattern>
                       </defs>
@@ -83,7 +82,7 @@
                     <svg viewBox="0 0 665 645">
                       <defs>
                           <pattern id="attachedImage3" height="100%" width="100%" patternContentUnits="objectBoundingBox">
-                              <image xlink:href="{{ block.settings.image }}"
+                              <image xlink:href="{{ block.settings.image | image_url: "master" }}"
                                   preserveAspectRatio="none" width="1" height="1" />
                           </pattern>
                       </defs>
