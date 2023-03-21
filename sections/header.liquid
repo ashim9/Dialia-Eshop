@@ -4,8 +4,7 @@
       <div class="header-bottominner">
         <div class="header-logo">
           <a href="index.html">
-            <img
-              src="{{ section.settings.site-logo | img_url: '105px' }}" loading="lazy" width="105" height="65" alt="logo" id="logo">
+            <img src="{{ section.settings.site-logo | img_url: '105px' }}" loading="lazy" width="105" height="65" alt="logo" id="logo">
           </a>
         </div>
         <nav class="tm-navigation">
@@ -15,7 +14,7 @@
                 <li class="tm-navigation-dropdown">
                   <a href="{{ link.url }}">
                     {{- link.title }}
-                    <i class="fa-solid fa-angle-down"></i>
+                    {% comment %} <i class="fa-solid fa-angle-down"></i> {% endcomment %}
                   </a>
                   <ul>
                     {%- for childlink in link.links -%}
@@ -27,7 +26,7 @@
                         <li>
                           <a href="{{ childlink.url }}">
                             {{ childlink.title }}
-                            <i class="fa-solid fa-angle-right"></i>
+                            {% comment %} <i class="fa-solid fa-angle-right"></i> {% endcomment %}
                           </a>
                           <ul>
                             {%- for grandchildlink in childlink.links -%}

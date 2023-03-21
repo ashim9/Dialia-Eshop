@@ -20,10 +20,10 @@
     <link rel="stylesheet" href="{{ "plugins.css" | asset_url }}" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="{{ "style.css" | asset_url }}" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="{{ "custom.css" | asset_url }}" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-            integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
-            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><script src="https://kit.fontawesome.com/75c46bc2bc.js" crossorigin="anonymous"></script>
+    {% comment %} <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+            integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" /> {% endcomment %}
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+   
   </head>
   <body>
     <div class="tm-preloader" style="transform: translateX(-100%);">
@@ -55,6 +55,7 @@
     <script src="{{ "jquery.min.js" | asset_url }}"></script>
     <script src="{{ "bootstrap.min.js" | asset_url }}"></script>
     <script src="{{ "main.js" | asset_url }}"></script>
+    <script src="https://kit.fontawesome.com/75c46bc2bc.js" crossorigin="anonymous"></script>
     <!-- JS -->
   </body>
 </html>
