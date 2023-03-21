@@ -2,8 +2,21 @@
   "sections": {
     "image_banner": {
       "type": "image_banner",
+      "blocks": {
+        "a3c093f8-d06c-43c0-b00d-915bd6a00f7b": {
+          "type": "hero-banner",
+          "settings": {
+            "heading-text": "heading text",
+            "heading-description": "Massage has a positive effect on every medical condition we have looked at massage is to work and act on the body with pressure.",
+            "button_text": "Button",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "a3c093f8-d06c-43c0-b00d-915bd6a00f7b"
+      ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/fashionable-man-in-hat.jpg"
       }
     }
   },
