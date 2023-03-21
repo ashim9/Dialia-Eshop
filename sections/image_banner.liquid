@@ -3,11 +3,7 @@
     {% when 'hero-banner' %}
       <div
         class="heroslider-area"
-        data-bgimage="
-          {{ 'bg-image-1.jpg' | asset_url | img_url: "master" }} {% style %}
-              background-image: url('assets/bg-image-1');
-          {% endstyle %}
-        "
+        data-bgimage="          {{ 'bg-image-1.jpg' | asset_url | img_url: "master" }}"
         data-black-overlay="3"
       >
         <!-- Heroslider Slider -->
@@ -19,7 +15,7 @@
                 <div class="col-lg-7 col-md-6 col-12 order-2 order-md-1">
                   <div class="heroslider-content">
                     <h1>{{ block.settings.heading }}</h1>
-                    <p>{{ block.settings.heading-description }}</p>
+                    <p>{{ block.settings['heading-description'] }}</p>
                     <a href="about-us.html" class="tm-button">{{ block.settings.button_text }} </a>
                   </div>
                 </div>
@@ -61,7 +57,7 @@
                 <div class="col-lg-7 col-md-6 col-12">
                   <div class="heroslider-content">
                     <h1>{{ block.settings.heading }}</h1>
-                    <p>{{ block.settings.heading-description }}</p>
+                    <p>{{ block.settings['heading-description'] }}</p>
                     <a href="about-us.html" class="tm-button"> {{ block.settings.button_text }} </a>
                   </div>
                 </div>
@@ -77,7 +73,7 @@
                 <div class="col-lg-7 col-md-6 col-12 order-2 order-md-1">
                   <div class="heroslider-content">
                     <h1>{{ block.settings.heading }}</h1>
-                    <p>{{ block.settings.heading-description }}</p>
+                    <p>{{ block.settings['heading-description'] }}</p>
                     <a href="about-us.html" class="tm-button">{{ block.settings.button_text }} </a>
                   </div>
                 </div>
@@ -106,7 +102,9 @@
 {% endfor %}
 
 {% style %}
-  background-image: url("assets/images/bg/bg-image-1.jpg");
+  .heroslider-area{
+    background-image: url('assets/bg-image-1.jpg');
+  }
 {% endstyle %}
 
 {% schema %}
