@@ -4,7 +4,14 @@
       <div class="header-bottominner">
         <div class="header-logo">
           <a href="index.html">
-            <img src="{{ section.settings.site-logo | img_url: '105px' }}" loading="lazy" width="105" height="65" alt="logo" id="logo">
+            <img
+              src="{{ section.settings.site-logo | img_url: '105px' }}"
+              loading="lazy"
+              width="105"
+              height="65"
+              alt="logo"
+              id="logo"
+            >
           </a>
         </div>
         <nav class="tm-navigation">
@@ -14,7 +21,7 @@
                 <li class="tm-navigation-dropdown">
                   <a href="{{ link.url }}">
                     {{- link.title }}
-                    <i class="fa-solid fa-angle-down"></i>
+                    <!-- <i class="fa-solid fa-angle-down"></i> -->
                   </a>
                   <ul>
                     {%- for childlink in link.links -%}
@@ -26,7 +33,7 @@
                         <li>
                           <a href="{{ childlink.url }}">
                             {{ childlink.title }}
-                            <i class="fa-solid fa-angle-right"></i>
+                            <!-- <i class="fa-solid fa-angle-right"></i> -->
                           </a>
                           <ul>
                             {%- for grandchildlink in childlink.links -%}
@@ -77,21 +84,20 @@
 </div>
 
 {% schema %}
-  {
-    "name": "Navbar",
-    "settings": [
-      {
-        "type": "image_picker",
-        "id":   "site-logo",
-        "label": "Site Logo"
-      }, 
-      {
-        "type": "link_list",
-        "id": "menu",
-        "default": "main-menu",
-        "label": "Choose Menu"
-      }
-    ]
-  }
-
+{
+  "name": "Navbar",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id":   "site-logo",
+      "label": "Site Logo"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "default": "main-menu",
+      "label": "Choose Menu"
+    }
+  ]
+}
 {% endschema %}
