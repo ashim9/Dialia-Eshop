@@ -15,6 +15,7 @@
         },
         "c848c819-be9e-4e63-8e3e-eddaa05440d2": {
           "type": "hero-banner",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/heroslider-image-2.jpg",
             "heading-text": "Pain makes People change",
@@ -25,6 +26,7 @@
         },
         "f720a432-413f-4ad4-aa67-ae1e8ea6fed0": {
           "type": "hero-banner",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/heroslider-image-3.jpg",
             "heading-text": "Pain makes People change",
