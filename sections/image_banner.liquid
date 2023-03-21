@@ -3,7 +3,7 @@
     {% when 'hero-banner' %}
       <div
         class="heroslider-area"
-        data-bgimage="assets/bg-image-1.jpg"
+        data-bgimage="{{ "bg-image-1.jpg" | asset_url }}"
         style="background-image: url('{{ "bg-image-1.jpg" | asset_url }}');"
         data-black-overlay="3"
         </div
