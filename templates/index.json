@@ -22,11 +22,22 @@
             "button_text": "Button",
             "button_link": ""
           }
+        },
+        "e217e505-aea0-4331-9c22-c1b5a8bf68a7": {
+          "type": "hero-banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/heroslider-image-3.jpg",
+            "heading-text": "heading text test 3..........",
+            "heading-description": "Massage has a positive effect on every medical condition we have looked at massage is to work and act on the body with pressure.",
+            "button_text": "Button 3",
+            "button_link": ""
+          }
         }
       },
       "block_order": [
         "a3c093f8-d06c-43c0-b00d-915bd6a00f7b",
-        "6c41b55d-a7da-4f40-9661-7ac3b550a4c0"
+        "6c41b55d-a7da-4f40-9661-7ac3b550a4c0",
+        "e217e505-aea0-4331-9c22-c1b5a8bf68a7"
       ],
       "settings": {
       }
