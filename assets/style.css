@@ -3363,13 +3363,19 @@ button.tm-videobutton:hover span {
 }
 
 /* Dropdown Menu */
-.tm-navigation .tm-navigation-dropdown > a::after {
+/* .tm-navigation .tm-navigation-dropdown > a::after {
   content: "\f2f9";
-  /* font-family: 'Material-Design-Iconic-Font'; */
+  font-family: 'Material-Design-Iconic-Font';
+  content: '';
   font-size: 18px;
   padding-left: 3px;
   vertical-align: middle;
-}
+} */
+ .tm-navigation .tm-navigation-dropdown> a i {
+    font-size: 18px;
+    padding-left: 3px;
+    vertical-align: middle;
+ }
 
 .tm-navigation .tm-navigation-dropdown ul {
   position: absolute;
