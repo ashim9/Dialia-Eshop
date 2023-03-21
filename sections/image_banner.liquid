@@ -1,11 +1,9 @@
 {% for block in section.blocks %}
   {% case block.type %}
     {% when 'hero-banner' %}
-      <div
-        class="heroslider-area"
-        data-bgimage="          {{ 'bg-image-1.jpg' | asset_url | img_url: "master" }}"
-        data-black-overlay="3"
-      >
+      <div class="heroslider-area" data-bgimage="assets/bg-image-1.jpg"  {% style %}
+              background-image: url('assets/bg-image-1.jpg');
+          {% endstyle %} > data-black-overlay="3" </div>
         <!-- Heroslider Slider -->
         <div class="heroslider-slider heroslider-animated tm-slider-dots tm-slider-dots-left" data-white-overlay="7">
           <!-- Heroslider Single -->
