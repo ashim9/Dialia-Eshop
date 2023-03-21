@@ -21,7 +21,7 @@
                     <svg viewBox="0 0 665 645">
                       <defs>
                           <pattern id="attachedImage1" height="100%" width="100%" patternContentUnits="objectBoundingBox">
-                              <image xlink:href="{{ block.settings.image }}"
+                              <image xlink:href="{{ block.settings.image | image_url: "master" }}"
                                   preserveAspectRatio="none" width="1" height="1" />
                           </pattern>
                       </defs>
