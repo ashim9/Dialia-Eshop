@@ -3,13 +3,10 @@
     {% when 'hero-banner' %}
       <div
         class="heroslider-area"
-        data-bgimage="
-          {{ 'bg-image-1.jpg' | asset_url | img_url: "master" }} {% style %}
-              background-image: url('assets/bg-image-1');
-          {% endstyle %}
-        "
-        data-black-overlay="3"
-      >
+        data-bgimage="{{ "bg-image-1.jpg" | asset_url }}"
+        style="background-image: url('{{ "bg-image-1.jpg" | asset_url }}');"
+        data-black-overlay="3">
+        </div>
         <!-- Heroslider Slider -->
         <div class="heroslider-slider heroslider-animated tm-slider-dots tm-slider-dots-left" data-white-overlay="7">
           <!-- Heroslider Single -->
@@ -106,7 +103,9 @@
 {% endfor %}
 
 {% style %}
-  background-image: url("assets/images/bg/bg-image-1.jpg");
+  .heroslider-area{
+    background-image: url('assets/bg-image-1.jpg');
+  }
 {% endstyle %}
 
 {% schema %}
