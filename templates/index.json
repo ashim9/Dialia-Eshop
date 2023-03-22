@@ -6,7 +6,9 @@
         "a3c093f8-d06c-43c0-b00d-915bd6a00f7b": {
           "type": "hero-banner",
           "settings": {
-            "image": "shopify:\/\/shop_images\/heroslider-image-1.jpg",
+            "image1": "shopify:\/\/shop_images\/heroslider-image-1.jpg",
+            "image2": "shopify:\/\/shop_images\/heroslider-image-2.jpg",
+            "image3": "shopify:\/\/shop_images\/heroslider-image-3.jpg",
             "heading-text": "Pain makes People change",
             "heading-description": "Massage has a positive effect on every medical condition we have looked at massage is to work and act on the body with pressure.",
             "button_text": "About Us",
@@ -17,7 +19,6 @@
           "type": "hero-banner",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/heroslider-image-2.jpg",
             "heading-text": "Pain makes People change 2",
             "heading-description": "Massage has a positive effect on every medical condition we have looked at massage is to work and act on the body with pressure.",
             "button_text": "About Us",
@@ -28,7 +29,6 @@
           "type": "hero-banner",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/heroslider-image-3.jpg",
             "heading-text": "Pain makes People change 3",
             "heading-description": "Massage has a positive effect on every medical condition we have looked at massage is to work and act on the body with pressure.",
             "button_text": "About Us",
