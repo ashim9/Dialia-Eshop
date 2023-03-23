@@ -58,11 +58,19 @@
             "header-text": "Physio Therapy",
             "description-text": "<p>Physiotherapists spend years studying how the body works, how injuries impact performance & how to recover and repair injured tissues.<\/p>"
           }
+        },
+        "2c74f8b8-f237-4d87-97a4-1bb026a8d810": {
+          "type": "feature-area",
+          "settings": {
+            "header-text": "Acupuncture",
+            "description-text": "<p>Acupuncture is a form of alternative medicine in which thin needles are inserted into the body. It is a key component of medicine.<\/p>"
+          }
         }
       },
       "block_order": [
         "template--18366201790764__ff034b7a-c8a7-47f4-b34b-591924a133b7-1679547534989339d0-0",
-        "e33ea600-3d7f-4e17-be2f-d0fd079e4765"
+        "e33ea600-3d7f-4e17-be2f-d0fd079e4765",
+        "2c74f8b8-f237-4d87-97a4-1bb026a8d810"
       ],
       "settings": {
       }
