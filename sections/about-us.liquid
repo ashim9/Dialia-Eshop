@@ -1,0 +1,87 @@
+
+<!-- About Us -->
+<div class="tm-section about-us-area bg-grey">
+    <div class="about-image" data-bgimage="assets/images/others/about-image-1.jpg" data-overlay="1">
+        <div class="tm-videobutton">
+            {% comment %} <a data-fancybox href="https://www.youtube.com/watch?v=Sv511KEiIJQ"> {% endcomment %}
+            <a data-fancybox href="{{ section.settings.video_url }}">
+                <span><i class="flaticon-play-button"></i></span>
+            </a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-end">
+            <div class="col-lg-6">
+                <div class="about-content tm-padding-section">
+                    {% comment %} <h2><span><span class="color-theme">Positive Effects</span> of</span><br>
+                        Dialia Registered Massage Therapy</h2> {% endcomment %}
+
+                    <h2><span class="color-theme">{{ section.settings.header-text }}</span> </h2>
+
+                    {{ section.settings.description-text }}
+
+                    {% comment %} <p>The health care profession of Dialia Registered Massage Therapy is far more
+                        advanced than typical bodywork or relaxation massage.</p>
+                    <p>Registered Massage therapy can be used for the treatment of both acute and
+                        chronic conditions. The purpose of massage is generally for the treatment of
+                        body stress or pain. Our services will help you reduce stress, relieve pain
+                        from headaches, reduce pain from injuries. Registered Massage Therapy is a safe and natural health
+                        care therapy that can help alleviate the discomfort associated with everyday. </p> {% endcomment %}
+                    <div class="about-contentbottom">
+                        <a href="about-us.html" class="tm-button">{{ block.settings.btn-text }}</a>
+                        <a href="tel:+18009156270" class="tm-callbutton">
+                            <span class="tm-callbutton-icon"><i class="zmdi zmdi-phone-in-talk"></i></span>
+                            <h3>{{ section.settings.number }}</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--// About Us -->
+
+
+{% schema %}
+{
+  "name": "About-Us",
+  "settings": [
+        {
+            "type": "text",
+            "id": "header-text",
+            "label": "Header text"
+        },
+         {
+            "type": "richtext",
+            "id": "description-text",
+            "default": "<p>Description text</p>",
+            "label": "Description Text"
+        },
+        {
+            "type": "video_url",
+            "id": "product-video",
+            "label": "Product Video",
+            "accept": [
+              "youtube",
+              "vimeo"
+            ]
+        },
+        {
+            "type": "text",
+            "id": "btn-text",
+            "label": "Button text"
+        },
+        {
+            "type": "text",
+            "id": "number",
+            "label": "Number"
+        }
+    ],
+
+    "presets": [
+        {
+            "name": "About-Us"
+        }
+    ]
+}
+{% endschema %}
