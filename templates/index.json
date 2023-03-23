@@ -51,10 +51,18 @@
             "header-text": "Massage Therapy",
             "description-text": "<p>Massage therapy is the manipulation of the soft tissues of the body including muscles, connective tissue, tendons, ligaments and joints.<\/p>"
           }
+        },
+        "e33ea600-3d7f-4e17-be2f-d0fd079e4765": {
+          "type": "feature-area",
+          "settings": {
+            "header-text": "Physio Therapy",
+            "description-text": "<p>Physiotherapists spend years studying how the body works, how injuries impact performance & how to recover and repair injured tissues.<\/p>"
+          }
         }
       },
       "block_order": [
-        "template--18366201790764__ff034b7a-c8a7-47f4-b34b-591924a133b7-1679547534989339d0-0"
+        "template--18366201790764__ff034b7a-c8a7-47f4-b34b-591924a133b7-1679547534989339d0-0",
+        "e33ea600-3d7f-4e17-be2f-d0fd079e4765"
       ],
       "settings": {
       }
