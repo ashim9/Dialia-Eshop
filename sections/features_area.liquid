@@ -1,32 +1,33 @@
   <!-- Features Area -->
-   {% for block in section.blocks %}
-      {% case block.type %}
-        {% when 'feature-area' %}
+
+        
           <div class="tm-section features-area bg-white tm-padding-section">
           <div class="container">
             <div class="row justify-content-center mt-30-reverse">
-          
-                <!-- Single Feature -->
-                <div class="col-lg-4 col-md-6 col-12 mt-30">
-                    <div class="tm-feature text-center wow fadeInUp">
-                        <span class="tm-feature-icon">
-                            <i class="flaticon-spa"></i>
-                        </span>
-                        <span class="tm-feature-backicon">
-                            <i class="flaticon-spa"></i>
-                        </span>
-                        <h5>{{ block.settings.header-text }}</h5>
-                        {{ block.settings.description-text }}
-                    </div>
-                </div>
-                <!--// Single Feature -->
-          
+                {% for block in section.blocks %}
+                  {% case block.type %}
+                    {% when 'feature-area' %}
+                      <!-- Single Feature -->
+                      <div class="col-lg-4 col-md-6 col-12 mt-30">
+                          <div class="tm-feature text-center wow fadeInUp">
+                              <span class="tm-feature-icon">
+                                  <i class="flaticon-spa"></i>
+                              </span>
+                              <span class="tm-feature-backicon">
+                                  <i class="flaticon-spa"></i>
+                              </span>
+                              <h5>{{ block.settings.header-text }}</h5>
+                              {{ block.settings.description-text }}
+                          </div>
+                      </div>
+                      <!--// Single Feature -->
+               {% endcase %}
+              {% endfor %}
             </div>
           </div>
           </div>
           <!--// Features Area -->
-      {% endcase %}
-    {% endfor %}
+     
 
 
   {% schema %}
