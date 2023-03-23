@@ -1,10 +1,10 @@
 
 <!-- About Us -->
 <div class="tm-section about-us-area bg-grey">
-    <div class="about-image" data-bgimage="assets/images/others/about-image-1.jpg" data-overlay="1">
+    <div class="about-image" data-bgimage="{{ "about-image-1.jpg" | asset_url }}" data-overlay="1">
         <div class="tm-videobutton">
             {% comment %} <a data-fancybox href="https://www.youtube.com/watch?v=Sv511KEiIJQ"> {% endcomment %}
-            <a data-fancybox href="{{ section.settings.video_url }}">
+            <a data-fancybox href="{{ section.settings.video_url.id }}">
                 <span><i class="flaticon-play-button"></i></span>
             </a>
         </div>
